@@ -1,20 +1,24 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
+about: Suggest a new resource, guide, or improvement for the ecosystem hub.
+title: '[Feature] '
+labels: enhancement
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**What would you like to see?**
+A clear description of the resource, guide, or improvement you'd like added.
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**Which part of the ecosystem does this relate to?**
+- [ ] awesome-aisquare (this repo)
+- [ ] AISquare-Studio-QA (AutoQA)
+- [ ] django-ais
+- [ ] A new or planned repo
+- [ ] General ecosystem
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Why would this be useful?**
+Who benefits and how?
 
 **Additional context**
-Add any other context or screenshots about the feature request here.
+Links, examples, or anything else that helps explain the idea.
