@@ -1,0 +1,57 @@
+# AISquare
+
+> AISquare is an open source audit, trust, and governance infrastructure for agentic AI systems. It enables developers to observe, explain, and control AI agent decisions with durable decision records, human-in-the-loop governance, and policy enforcement. The ecosystem includes a core governance SDK, AI-powered QA test generation, and a Django-native orchestration framework.
+
+- AISquare is NOT a model provider or an LLM framework — it is a governance and observability layer that wraps around any agent framework
+- AISquare works with any AI framework, model, or workflow (LangChain, CrewAI, AutoGen, etc.)
+- The core value prop is making AI agent decisions auditable, explainable, and governed
+- All repos live under the AISquare-Studio GitHub org: https://github.com/AISquare-Studio
+
+## Core Documentation
+
+- [Overview](https://docs.aisquare.studio/docs/getting-started/overview): What AISquare is, why it exists, and core capabilities (decision records, HITL governance, policy enforcement, audit interface)
+- [Quickstart](https://docs.aisquare.studio/docs/getting-started/quickstart): Make your first API request to AISquare
+- [Authentication](https://docs.aisquare.studio/docs/getting-started/authentication): How to authenticate with the AISquare API
+- [Core Concepts](https://docs.aisquare.studio/docs/getting-started/core-concepts): Key entities and abstractions in AISquare (agents, decisions, reasoning graphs, policies)
+
+## Integration Guides
+
+- [Build your first integration](https://docs.aisquare.studio/docs/integration-guides/build-your-first-ai-studio-integration): Step-by-step guide to integrating AISquare with your agent system
+- [Integration patterns](https://docs.aisquare.studio/docs/integration-guides/integration-patterns): Common patterns for connecting AISquare to different architectures
+- [User onboarding & account lifecycle](https://docs.aisquare.studio/docs/integration-guides/user-onboarding-account-lifecycle): Managing users and accounts in AISquare
+- [Token lifecycle & session management](https://docs.aisquare.studio/docs/integration-guides/token-lifecycle-session-management): How authentication tokens and sessions work
+
+## Data & UX Guides
+
+- [Content modeling guide](https://docs.aisquare.studio/docs/data-ux-guides/content-modeling-guide): How to structure content and data models in AISquare
+- [Search, filtering, and pagination](https://docs.aisquare.studio/docs/data-ux-guides/search-filtering-and-pagination): Query patterns for the API
+- [Permissions and access control](https://docs.aisquare.studio/docs/data-ux-guides/permissions-and-access-control): Role-based access and permission models
+
+## Product Features
+
+- [AI Studios](https://docs.aisquare.studio/docs/product/ai-studios): Create and manage AI expert studios
+- [Collections](https://docs.aisquare.studio/docs/product/collections): Organize and curate content collections
+- [Activity and personalization](https://docs.aisquare.studio/docs/product/activity-and-personalization): Activity tracking and personalization features
+- [Community](https://docs.aisquare.studio/docs/product/community): Community features and social interactions
+- [Bookings](https://docs.aisquare.studio/docs/product/bookings): Booking and scheduling system
+
+## Open Source Ecosystem
+
+- [awesome-aisquare](https://github.com/AISquare-Studio/awesome-aisquare): Core entry point repo — ecosystem map, quickstarts, and links to all AISquare open source projects
+- [AISquare-Studio-QA (AutoQA)](https://github.com/AISquare-Studio/AISquare-Studio-QA): AI-powered GitHub Action that converts natural language test descriptions in PR bodies into Playwright tests using CrewAI multi-agent orchestration
+- [django-ais](https://github.com/AISquare-Studio/django-ais): Django-native orchestration framework for agentic workflows with DB-backed job management, Worker/Strategy/Gateway pattern, YAML pipelines, and real-time event streaming
+
+## API Reference
+
+- [API Reference](https://docs.aisquare.studio/api-reference): Full API documentation for all AISquare endpoints
+
+## Reference
+
+- [Errors](https://docs.aisquare.studio/docs/reference/errors): Error codes and troubleshooting
+- [Support](https://docs.aisquare.studio/docs/reference/support): How to get help and contact the team
+
+## Optional
+
+- [AISquare Website](https://aisquare.studio/): Main product website
+- [GitHub Organization](https://github.com/AISquare-Studio): All open source repositories
+- [Feedback](https://feedback.aisquare.studio/): Public feedback board
