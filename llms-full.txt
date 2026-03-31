@@ -1,0 +1,218 @@
+# AISquare
+
+> AISquare is an open source audit, trust, and governance infrastructure for agentic AI systems. It enables developers to observe, explain, and control AI agent decisions with durable decision records, human-in-the-loop governance, and policy enforcement.
+
+- AISquare is NOT a model provider or an LLM framework — it is a governance and observability layer that wraps around any agent framework
+- AISquare works with any AI framework, model, or workflow (LangChain, CrewAI, AutoGen, etc.)
+- The core value prop is making AI agent decisions auditable, explainable, and governed
+- All repos live under the AISquare-Studio GitHub org: https://github.com/AISquare-Studio
+
+---
+
+## Why AISquare Exists
+
+As organizations adopt AI agents, a critical challenge emerges: AI systems make decisions that cannot be easily explained, audited, or trusted. This creates three major risks:
+
+- **Regulatory risk**: no audit trail for AI decisions
+- **Legal risk**: inability to explain outcomes
+- **Reputational risk**: black-box failures becoming public
+
+Without governance, AI adoption slows down or stops entirely. AISquare introduces a missing layer in modern AI systems: a system of record for AI decisions. Just like financial systems track transactions and HR systems track people, AISquare tracks and governs AI decision-making.
+
+## Core Capabilities
+
+### Durable Decision Record
+A tamper-evident log of every agent action and reasoning path. Ensures decisions can be audited and defended when needed.
+
+### Human-in-the-Loop Governance
+Structured workflows allow humans to review, approve, or intervene in agent decisions.
+
+### Decision-Level Policy Enforcement
+Policies applied directly to agent reasoning to allow, deny, escalate, or modify decisions.
+
+### No-Code Audit Interface
+Non-technical users can inspect and replay decisions without engineering support.
+
+## How AISquare Works
+
+A typical integration flow:
+
+1. **Connect your agents** — Integrate agents from any framework using the AISquare SDK
+2. **Navigate decisions** — Visualize decision flows and reasoning paths
+3. **Audit reasoning** — Understand claims, assumptions, and evidence
+4. **Apply policies** — Add human feedback and governance controls
+
+### The Reasoning and Memory Graph
+
+At the core of AISquare is a persistent reasoning graph that:
+- Records why decisions are made
+- Preserves logic and context
+- Stores human interventions
+- Acts as audit-ready evidence
+
+---
+
+## Open Source Ecosystem
+
+### awesome-aisquare (Core Entry Point)
+
+**Repo**: https://github.com/AISquare-Studio/awesome-aisquare
+
+The front door to all AISquare open source. Contains:
+- Ecosystem map linking all repos
+- Quickstart guides
+- Core concepts (agents, debugging, reasoning)
+- Links to examples, templates, and integrations
+
+### AISquare-Studio-QA (AutoQA)
+
+**Repo**: https://github.com/AISquare-Studio/AISquare-Studio-QA
+**Stars**: 103 | **License**: Apache-2.0 | **Language**: Python
+
+AI-powered GitHub Action that converts natural language test descriptions in pull request bodies into fully automated Playwright tests using CrewAI multi-agent orchestration and OpenAI GPT-4.
+
+#### Key Features
+- Natural language steps become executable Playwright Python tests
+- Active Execution Mode with iterative step-by-step generation and real-time browser context
+- Smart selector discovery via DOMInspectorTool
+- Intelligent retry with automatic error recovery
+- AST-based security validation prevents unsafe code patterns
+- Cross-repository architecture — deploys as a GitHub Action, runs in any repository
+- ETag-based idempotency prevents duplicate test generation
+- Multi-tier test organization (A/B/C tiers by criticality)
+
+#### Quick Start
+1. Add `.github/workflows/autoqa.yml` to your repository
+2. Configure secrets: `OPENAI_API_KEY`, `STAGING_URL`, `STAGING_EMAIL`, `STAGING_PASSWORD`
+3. Write test steps in a PR description inside a fenced `autoqa` block:
+
+```
+```autoqa
+flow_name: user_login_success
+tier: A
+area: auth
+```
+
+1. Navigate to the login page
+2. Enter valid email address
+3. Enter valid password
+4. Click the login button
+5. Verify the dashboard appears
+```
+
+#### Architecture
+Multi-agent system powered by CrewAI:
+- **Planner Agent**: Converts natural language steps into Playwright Python code
+- **Executor Agent**: Validates generated code via AST analysis and runs in sandboxed browser
+- **Step Executor Agent**: Handles active execution mode, one step at a time with live browser context
+- **Iterative Orchestrator**: Coordinates step-by-step execution with state via ExecutionContext
+
+#### Execution Modes
+- `generate`: Parse PR, generate new test, execute, commit on success
+- `suite`: Run existing test suite only (regression testing)
+- `all`: Generate new test AND run full existing suite
+
+#### Security Model
+- AST-based validation blocks dangerous constructs (eval, exec, open, subprocess, file I/O)
+- Only playwright.sync_api, time, datetime, and re imports permitted
+- Tests run in isolated Playwright browser contexts
+- Sensitive values masked in logs and reports
+
+### django-ais (Django Orchestration Framework)
+
+**Repo**: https://github.com/AISquare-Studio/django-ais
+**License**: MIT | **Language**: Python | **Status**: Pre-release
+
+Django-native orchestration framework for building agentic workflows with database-backed job management, YAML-configurable pipelines, and real-time event streaming.
+
+#### Why django-ais Instead of LangGraph / CrewAI / Temporal
+Those tools operate outside your Django ecosystem. django-ais is for teams that want:
+- Jobs persisted in your existing PostgreSQL database
+- Celery as the task runner you already operate
+- Django Channels for real-time streaming you already deploy
+- Django ORM for querying job history, not a separate state store
+- Standard Django patterns: models, migrations, admin, signals, management commands
+
+#### Architecture: Worker / Strategy / Gateway
+
+```
+Worker (Lifecycle) → Strategy (Brain) → Gateway (Execution)
+     │                                        │
+     ▼                                        ▼
+  JobPacket (DB)                          EventBus (Redis)
+```
+
+| Layer | Responsibility | Rule |
+|-------|---------------|------|
+| **Worker** | Job lifecycle, state transitions, child job spawning | Knows Django models, owns the job |
+| **Strategy** | Prompt engineering, context composition, output schema | No Django models — Pydantic only |
+| **Gateway** | LLM/compute execution, streaming, tracing | Interchangeable backends |
+
+#### Key Features
+- DB-backed job tracking with persistent JobPacket model (status, payload, result, parent-child, idempotency keys)
+- Real-time event streaming via AgentEvent model + Redis-backed EventBus for SSE/WebSocket
+- YAML workflow definitions importable via management commands
+- Dynamic worker registry — register workers in AppConfig.ready(), dispatch by type
+- Multi-tenant safety — scoped event streaming and job isolation per user/workspace
+
+#### Quick Start (Coming Soon)
+```python
+pip install django-ais
+
+# settings.py
+INSTALLED_APPS = [..., 'django_ais']
+DJANGO_AIS = {
+    'CELERY_QUEUE': 'default',
+    'EVENT_CHANNEL_LAYER': 'default',
+}
+
+# your_app/workers.py
+from django_ais.workers import BaseWorker
+from django_ais.strategies import BaseStrategy
+
+class SummarizationStrategy(BaseStrategy):
+    def compose_context(self, job):
+        return {"prompt": f"Summarize: {job.payload['text']}"}
+
+class SummarizationWorker(BaseWorker):
+    strategy_class = SummarizationStrategy
+    gateway_class = BaseGateway
+```
+
+#### Requirements
+- Python 3.11+
+- Django 4.2+
+- Celery 5.3+
+- Redis
+- Django Channels (optional, for real-time streaming)
+
+---
+
+## API Reference
+
+The AISquare API allows you to:
+- Retrieve and analyze agent decisions
+- Access structured experience and resource data
+- Manage collections and workflows
+- Build applications on top of governed AI systems
+
+Full API reference: https://docs.aisquare.studio/api-reference
+
+## Authentication
+
+AISquare uses token-based authentication. See: https://docs.aisquare.studio/docs/getting-started/authentication
+
+## Integration Patterns
+
+Common patterns for connecting AISquare to different architectures: https://docs.aisquare.studio/docs/integration-guides/integration-patterns
+
+## Errors and Troubleshooting
+
+Error codes and troubleshooting guide: https://docs.aisquare.studio/docs/reference/errors
+
+## Support
+
+- Documentation: https://docs.aisquare.studio
+- GitHub Organization: https://github.com/AISquare-Studio
+- Feedback: https://feedback.aisquare.studio
+- Email: bots@aisquare.com
