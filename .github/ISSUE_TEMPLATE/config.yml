@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation
+    url: https://docs.aisquare.studio
+    about: Check the docs — your answer might already be there.
+  - name: Feedback board
+    url: https://feedback.aisquare.studio
+    about: Vote on feature requests or submit your own.
+  - name: Community discussions
+    url: https://github.com/orgs/AISquare-Studio/discussions
+    about: Ask questions, share ideas, or just say hi.
