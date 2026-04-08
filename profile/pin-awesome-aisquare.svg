@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="120">
   <rect width="400" height="120" rx="6" fill="#0d1117" stroke="#30363d"/>
-  <text x="20" y="35" fill="#58a6ff" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="bold">AISquare-Studio/awesome-aisquare</text>
+  <text x="20" y="35" fill="#f0883e" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="bold">AISquare-Studio/awesome-aisquare</text>
   <text x="20" y="60" fill="#8b949e" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">Ecosystem hub, quickstarts, and links</text>
-  <text x="20" y="100" fill="#6e7681" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11">Card auto-updates weekly via GitHub Actions</text>
+  <g transform="translate(20, 90)">
+    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z" fill="#e3b341"/>
+    <text x="20" y="12" fill="#8b949e" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">2</text>
+  </g>
 </svg>

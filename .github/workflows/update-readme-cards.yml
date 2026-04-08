@@ -19,7 +19,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
-          options: username=AISquare-Studio&repo=awesome-aisquare&theme=dark&show_owner=true
+          options: username=AISquare-Studio&repo=awesome-aisquare&theme=dark&show_owner=true&title_color=f0883e
           path: profile/pin-awesome-aisquare.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -27,7 +27,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
-          options: username=AISquare-Studio&repo=AISquare-Studio-QA&theme=dark&show_owner=true
+          options: username=AISquare-Studio&repo=AISquare-Studio-QA&theme=dark&show_owner=true&title_color=f0883e
           path: profile/pin-aisquare-studio-qa.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -35,7 +35,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
-          options: username=AISquare-Studio&repo=django-ais&theme=dark&show_owner=true
+          options: username=AISquare-Studio&repo=django-ais&theme=dark&show_owner=true&title_color=f0883e
           path: profile/pin-django-ais.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
