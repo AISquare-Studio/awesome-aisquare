@@ -34,12 +34,13 @@ Click on a card to explore the project. ⭐ Star your favorites to show support!
   <a href="https://github.com/AISquare-Studio/awesome-aisquare">
     <img src="./profile/pin-awesome-aisquare.svg" alt="awesome-aisquare"/>
   </a>
-  <a href="https://github.com/AISquare-Studio/AISquare-Studio-QA">
-    <img src="./profile/pin-aisquare-studio-qa.svg" alt="AISquare-Studio-QA"/>
-  </a>
 </div>
 
 <div align="center">
+  <a href="https://github.com/AISquare-Studio/AISquare-Studio-QA">
+    <img src="./profile/pin-aisquare-studio-qa.svg" alt="AISquare-Studio-QA"/>
+  </a>
+  &nbsp;&nbsp;
   <a href="https://github.com/AISquare-Studio/django-ais">
     <img src="./profile/pin-django-ais.svg" alt="django-ais"/>
   </a>
@@ -48,26 +49,34 @@ Click on a card to explore the project. ⭐ Star your favorites to show support!
 ### 📋 Case study
 
 <div align="center">
-  <a href="https://on-anmols-mind.aisquare.studio/s/?type=note&id=4425&rid=990&ruid=0daa89e6-a7fd-40fc-9341-9db1c671a96a"><img src="https://img.shields.io/badge/Dramatyza-Case_study:_AI_governance_in_action-58a6ff?style=for-the-badge" alt="Dramatyza Case Study"/></a>
+  <a href="https://on-anmols-mind.aisquare.studio/s/?type=note&id=4425&rid=990&ruid=0daa89e6-a7fd-40fc-9341-9db1c671a96a">
+    <img src="https://placehold.co/960x540/0d1117/58a6ff?text=Dramatyze+Platform+Screenshot&font=montserrat" width="600" alt="Dramatyze platform screenshot" style="border-radius: 12px;"/>
+  </a>
+  <br/><br/>
+  <a href="https://on-anmols-mind.aisquare.studio/s/?type=note&id=4425&rid=990&ruid=0daa89e6-a7fd-40fc-9341-9db1c671a96a"><img src="https://img.shields.io/badge/Dramatyze-Case_study:_AI_governance_in_action-58a6ff?style=for-the-badge" alt="Dramatyze Case Study"/></a>
 </div>
 
 ### 🔜 Coming soon
 
 <div align="center">
-  <img src="https://img.shields.io/badge/aisquare--examples-Runnable_governance_scenario_examples-6e7681?style=for-the-badge&logo=github" alt="aisquare-examples"/>
-  <img src="https://img.shields.io/badge/aisquare--templates-Starter_scaffolds_for_governed_AI_apps-6e7681?style=for-the-badge&logo=github" alt="aisquare-templates"/>
-  <img src="https://img.shields.io/badge/aisquare--integrations-Adapters_for_LangChain,_CrewAI,_AutoGen-6e7681?style=for-the-badge&logo=github" alt="aisquare-integrations"/>
-  <img src="https://img.shields.io/badge/AISquare_SDK-Client_libraries_for_direct_API_integration-6e7681?style=for-the-badge&logo=github" alt="AISquare SDK"/>
+
+| Project | Description |
+|:--------|:------------|
+| **aisquare-examples** | Runnable governance scenario examples |
+| **aisquare-templates** | Starter scaffolds for governed AI apps |
+| **aisquare-integrations** | Adapters for LangChain, CrewAI, AutoGen |
+| **AISquare SDK** | Client libraries for direct API integration |
+
 </div>
 
 ## Quick links
 
 <div align="center">
-  <a href="https://docs.aisquare.studio"><img src="https://img.shields.io/badge/📖_Documentation-docs.aisquare.studio-blue?style=for-the-badge" alt="Documentation"/></a>
-  <a href="https://docs.aisquare.studio/api-reference"><img src="https://img.shields.io/badge/🔌_API_Reference-docs.aisquare.studio-blue?style=for-the-badge" alt="API Reference"/></a>
-  <a href="https://aisquare.studio"><img src="https://img.shields.io/badge/🌐_Website-aisquare.studio-blue?style=for-the-badge" alt="Website"/></a>
-  <a href="https://feedback.aisquare.studio"><img src="https://img.shields.io/badge/💬_Feedback-feedback.aisquare.studio-blue?style=for-the-badge" alt="Feedback"/></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/🤝_Contributing-guidelines-blue?style=for-the-badge" alt="Contributing"/></a>
+  <a href="https://docs.aisquare.studio"><img src="https://img.shields.io/badge/📖_Documentation-docs.aisquare.studio-2563eb?style=for-the-badge" alt="Documentation"/></a>
+  <a href="https://docs.aisquare.studio/api-reference"><img src="https://img.shields.io/badge/🔌_API_Reference-docs.aisquare.studio-7c3aed?style=for-the-badge" alt="API Reference"/></a>
+  <a href="https://aisquare.studio"><img src="https://img.shields.io/badge/🌐_Website-aisquare.studio-0d9488?style=for-the-badge" alt="Website"/></a>
+  <a href="https://feedback.aisquare.studio"><img src="https://img.shields.io/badge/💬_Feedback-feedback.aisquare.studio-ea580c?style=for-the-badge" alt="Feedback"/></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/🤝_Contributing-guidelines-16a34a?style=for-the-badge" alt="Contributing"/></a>
 </div>
 
 ## Get started in 5 minutes
