@@ -28,47 +28,36 @@ This repo is your starting point.
 
 ## Ecosystem map
 
-- ✨ The cards below link to repositories and resources in the AISquare ecosystem
-- 💡 Click on a card to explore the project
-- 🤝 Star your favorites to show support!
+Click on a card to explore the project. ⭐ Star your favorites to show support!
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Active-3fb950?style=flat-square" alt="Active"/>
-  <img src="https://img.shields.io/badge/Pre--release-d29922?style=flat-square" alt="Pre-release"/>
-  <img src="https://img.shields.io/badge/Coming_Soon-6e7681?style=flat-square" alt="Coming Soon"/>
-  <img src="https://img.shields.io/badge/Case_Study-58a6ff?style=flat-square" alt="Case Study"/>
+  <a href="https://github.com/AISquare-Studio/awesome-aisquare">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=AISquare-Studio&repo=awesome-aisquare&theme=dark&show_owner=true" alt="awesome-aisquare"/>
+  </a>
+  <a href="https://github.com/AISquare-Studio/AISquare-Studio-QA">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=AISquare-Studio&repo=AISquare-Studio-QA&theme=dark&show_owner=true" alt="AISquare-Studio-QA"/>
+  </a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/AISquare-Studio/awesome-aisquare"><img src="https://img.shields.io/badge/awesome--aisquare-Ecosystem_hub,_quickstarts,_and_links-3fb950?style=for-the-badge&logo=github" alt="awesome-aisquare"/></a>
+  <a href="https://github.com/AISquare-Studio/django-ais">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=AISquare-Studio&repo=django-ais&theme=dark&show_owner=true" alt="django-ais"/>
+  </a>
 </div>
 
-<div align="center">
-  <a href="https://github.com/AISquare-Studio/AISquare-Studio-QA"><img src="https://img.shields.io/badge/AISquare--Studio--QA-AI--powered_test_generation_GitHub_Action-3fb950?style=for-the-badge&logo=github" alt="AISquare-Studio-QA"/></a>
-</div>
+### 📋 Case study
 
 <div align="center">
-  <a href="https://github.com/AISquare-Studio/django-ais"><img src="https://img.shields.io/badge/django--ais-Django--native_agentic_workflow_orchestration-d29922?style=for-the-badge&logo=github" alt="django-ais"/></a>
+  <a href="https://on-anmols-mind.aisquare.studio/s/?type=note&id=4425&rid=990&ruid=0daa89e6-a7fd-40fc-9341-9db1c671a96a"><img src="https://img.shields.io/badge/Dramatyza-Case_study:_AI_governance_in_action-58a6ff?style=for-the-badge" alt="Dramatyza Case Study"/></a>
 </div>
 
-<div align="center">
-  <a href="https://on-anmols-mind.aisquare.studio/s/?type=note&id=4425&rid=990&ruid=0daa89e6-a7fd-40fc-9341-9db1c671a96a"><img src="https://img.shields.io/badge/Dramatyza-Case_study:_AI_governance_in_action-58a6ff?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0tMiAxNWwtNS01IDEuNDEtMS40MUwxMCAxNC4xN2w3LjU5LTcuNTlMMTkgOGwtOSA5eiIvPjwvc3ZnPg==" alt="Dramatyza"/></a>
-</div>
+### 🔜 Coming soon
 
 <div align="center">
-  <a href="#ecosystem-map"><img src="https://img.shields.io/badge/aisquare--examples-Runnable_governance_scenario_examples-6e7681?style=for-the-badge&logo=github" alt="aisquare-examples"/></a>
-</div>
-
-<div align="center">
-  <a href="#ecosystem-map"><img src="https://img.shields.io/badge/aisquare--templates-Starter_scaffolds_for_governed_AI_apps-6e7681?style=for-the-badge&logo=github" alt="aisquare-templates"/></a>
-</div>
-
-<div align="center">
-  <a href="#ecosystem-map"><img src="https://img.shields.io/badge/aisquare--integrations-Adapters_for_LangChain,_CrewAI,_AutoGen-6e7681?style=for-the-badge&logo=github" alt="aisquare-integrations"/></a>
-</div>
-
-<div align="center">
-  <a href="#ecosystem-map"><img src="https://img.shields.io/badge/AISquare_SDK-Client_libraries_for_direct_API_integration-6e7681?style=for-the-badge&logo=github" alt="AISquare SDK"/></a>
+  <img src="https://img.shields.io/badge/aisquare--examples-Runnable_governance_scenario_examples-6e7681?style=for-the-badge&logo=github" alt="aisquare-examples"/>
+  <img src="https://img.shields.io/badge/aisquare--templates-Starter_scaffolds_for_governed_AI_apps-6e7681?style=for-the-badge&logo=github" alt="aisquare-templates"/>
+  <img src="https://img.shields.io/badge/aisquare--integrations-Adapters_for_LangChain,_CrewAI,_AutoGen-6e7681?style=for-the-badge&logo=github" alt="aisquare-integrations"/>
+  <img src="https://img.shields.io/badge/AISquare_SDK-Client_libraries_for_direct_API_integration-6e7681?style=for-the-badge&logo=github" alt="AISquare SDK"/>
 </div>
 
 ## Quick links
