@@ -32,16 +32,16 @@ Click on a card to explore the project. ⭐ Star your favorites to show support!
 
 <div align="center">
   <a href="https://github.com/AISquare-Studio/awesome-aisquare">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=AISquare-Studio&repo=awesome-aisquare&theme=dark&show_owner=true" alt="awesome-aisquare"/>
+    <img src="./profile/pin-awesome-aisquare.svg" alt="awesome-aisquare"/>
   </a>
   <a href="https://github.com/AISquare-Studio/AISquare-Studio-QA">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=AISquare-Studio&repo=AISquare-Studio-QA&theme=dark&show_owner=true" alt="AISquare-Studio-QA"/>
+    <img src="./profile/pin-aisquare-studio-qa.svg" alt="AISquare-Studio-QA"/>
   </a>
 </div>
 
 <div align="center">
   <a href="https://github.com/AISquare-Studio/django-ais">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=AISquare-Studio&repo=django-ais&theme=dark&show_owner=true" alt="django-ais"/>
+    <img src="./profile/pin-django-ais.svg" alt="django-ais"/>
   </a>
 </div>
 
