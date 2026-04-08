@@ -2,7 +2,7 @@
 
 <div align="center">
   <!-- Replace the URL below with your own demo GIF or screenshot -->
-  <img src="banner.png" width="600" alt="AISquare in action"/>
+  <img src="banner.png" width="100%" alt="AISquare in action"/>
 </div>
 
 <br/>
@@ -50,7 +50,7 @@ Click on a card to explore the project. ⭐ Star your favorites to show support!
 
 <div align="center">
   <a href="https://on-anmols-mind.aisquare.studio/s/?type=note&id=4425&rid=990&ruid=0daa89e6-a7fd-40fc-9341-9db1c671a96a">
-    <img src="dramatyze.png" width="600" alt="Dramatyze platform screenshot" style="border-radius: 12px;"/>
+    <img src="dramatyze.png" width="100%" alt="Dramatyze platform screenshot" style="border-radius: 12px;"/>
   </a>
   <br/><br/>
   <a href="https://on-anmols-mind.aisquare.studio/s/?type=note&id=4425&rid=990&ruid=0daa89e6-a7fd-40fc-9341-9db1c671a96a"><img src="https://img.shields.io/badge/Dramatyze-Case_study:_AI_governance_in_action-58a6ff?style=for-the-badge" alt="Dramatyze Case Study"/></a>
