@@ -1,11 +1,22 @@
 # awesome-aisquare
 
+<div align="center">
+  <!-- Replace the URL below with your own demo GIF or screenshot -->
+  <img src="banner.png" width="100%" alt="AISquare in action"/>
+</div>
+
+<br/>
+
 Audit, trust, and governance infrastructure for agentic AI systems.
+
+<div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/AISquare-Studio/awesome-aisquare?style=flat-square)](https://github.com/AISquare-Studio/awesome-aisquare/stargazers)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-aisquare.studio-green?style=flat-square)](https://docs.aisquare.studio)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
+
+</div>
 
 ## What is AISquare
 
@@ -17,18 +28,56 @@ This repo is your starting point.
 
 ## Ecosystem map
 
-| Repo | What it does | Status | Stars |
-|------|-------------|--------|-------|
-| **[awesome-aisquare](https://github.com/AISquare-Studio/awesome-aisquare)** | You are here. Ecosystem hub, quickstarts, and links. | Active | [![Stars](https://img.shields.io/github/stars/AISquare-Studio/awesome-aisquare?style=flat-square&label=)](https://github.com/AISquare-Studio/awesome-aisquare) |
-| **[AISquare-Studio-QA](https://github.com/AISquare-Studio/AISquare-Studio-QA)** | AI-powered GitHub Action — write tests in plain English, get Playwright tests back. No more "I'll add tests later." | Active | [![Stars](https://img.shields.io/github/stars/AISquare-Studio/AISquare-Studio-QA?style=flat-square&label=)](https://github.com/AISquare-Studio/AISquare-Studio-QA) |
-| **[django-ais](https://github.com/AISquare-Studio/django-ais)** | Django-native orchestration for agentic workflows. DB-backed jobs, YAML pipelines, real-time streaming. Your Django monolith called — it wants agents. | Pre-release | [![Stars](https://img.shields.io/github/stars/AISquare-Studio/django-ais?style=flat-square&label=)](https://github.com/AISquare-Studio/django-ais) |
-| `aisquare-examples` | Runnable use-case examples | Coming soon | — |
-| `aisquare-templates` | Starter scaffolds for governed AI apps | Coming soon | — |
-| `aisquare-integrations` | Adapters for LangChain, CrewAI, AutoGen, and more | Coming soon | — |
+Click on a card to explore the project. ⭐ Star your favorites to show support!
+
+<div align="center">
+  <a href="https://github.com/AISquare-Studio/awesome-aisquare">
+    <img src="./profile/pin-awesome-aisquare.svg" alt="awesome-aisquare"/>
+  </a>
+</div>
+
+<div align="center">
+  <a href="https://github.com/AISquare-Studio/AISquare-Studio-QA">
+    <img src="./profile/pin-aisquare-studio-qa.svg" alt="AISquare-Studio-QA"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/AISquare-Studio/django-ais">
+    <img src="./profile/pin-django-ais.svg" alt="django-ais"/>
+  </a>
+</div>
+
+### 📋 Case study
+
+<div align="center">
+  <a href="https://on-anmols-mind.aisquare.studio/s/?type=note&id=4425&rid=990&ruid=0daa89e6-a7fd-40fc-9341-9db1c671a96a">
+    <img src="dramatyze.png" width="100%" alt="Dramatyze platform screenshot" style="border-radius: 12px;"/>
+  </a>
+  <br/><br/>
+  <a href="https://on-anmols-mind.aisquare.studio/s/?type=note&id=4425&rid=990&ruid=0daa89e6-a7fd-40fc-9341-9db1c671a96a"><img src="https://img.shields.io/badge/Dramatyze-Case_study:_AI_governance_in_action-58a6ff?style=for-the-badge" alt="Dramatyze Case Study"/></a>
+</div>
+
+### 🔜 Coming soon
+
+<div align="center">
+
+| Project | Description |
+|:--------|:------------|
+| **aisquare-examples** | Runnable governance scenario examples |
+| **aisquare-templates** | Starter scaffolds for governed AI apps |
+| **aisquare-integrations** | Adapters for LangChain, CrewAI, AutoGen |
+| **AISquare SDK** | Client libraries for direct API integration |
+
+</div>
 
 ## Quick links
 
-[Documentation](https://docs.aisquare.studio) · [API Reference](https://docs.aisquare.studio/api-reference) · [Website](https://aisquare.studio) · [Feedback](https://feedback.aisquare.studio) · [Contributing](CONTRIBUTING.md)
+<div align="center">
+  <a href="https://docs.aisquare.studio"><img src="https://img.shields.io/badge/📖_Documentation-docs.aisquare.studio-2563eb?style=for-the-badge" alt="Documentation"/></a>
+  <a href="https://docs.aisquare.studio/api-reference"><img src="https://img.shields.io/badge/🔌_API_Reference-docs.aisquare.studio-7c3aed?style=for-the-badge" alt="API Reference"/></a>
+  <a href="https://aisquare.studio"><img src="https://img.shields.io/badge/🌐_Website-aisquare.studio-0d9488?style=for-the-badge" alt="Website"/></a>
+  <a href="https://feedback.aisquare.studio"><img src="https://img.shields.io/badge/💬_Feedback-feedback.aisquare.studio-ea580c?style=for-the-badge" alt="Feedback"/></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/🤝_Contributing-guidelines-16a34a?style=for-the-badge" alt="Contributing"/></a>
+</div>
 
 ## Get started in 5 minutes
 
@@ -121,15 +170,6 @@ Full docs: [django-ais](https://github.com/AISquare-Studio/django-ais)
 ```
 
 Your agent framework handles reasoning. AISquare handles the "wait, should you actually do that?" part — recording decisions, enforcing policies, and routing to human review. AutoQA validates behavior through generated tests. django-ais orchestrates multi-step workflows inside Django.
-
-## Roadmap
-
-What we're building next (in rough priority order):
-
-- **aisquare-examples** — Runnable examples for common governance scenarios
-- **aisquare-templates** — Starter scaffolds for governed AI applications
-- **aisquare-integrations** — Adapters for LangChain, CrewAI, AutoGen, and other frameworks
-- **AISquare SDK** — Client libraries for direct API integration
 
 ## LLM-friendly docs
 
