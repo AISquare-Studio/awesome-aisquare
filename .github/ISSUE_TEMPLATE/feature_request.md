@@ -13,7 +13,8 @@ A clear description of the resource, guide, or improvement you'd like added.
 **Which part of the ecosystem does this relate to?**
 - [ ] awesome-aisquare (this repo)
 - [ ] AISquare-Studio-QA (AutoQA)
-- [ ] django-ais
+- [ ] aisquare-cli
+- [ ] pipe
 - [ ] A new or planned repo
 - [ ] General ecosystem
 

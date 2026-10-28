@@ -41,8 +41,14 @@ Click on a card to explore the project. ⭐ Star your favorites to show support!
     <img src="./profile/pin-aisquare-studio-qa.svg" alt="AISquare-Studio-QA"/>
   </a>
   &nbsp;&nbsp;
-  <a href="https://github.com/AISquare-Studio/django-ais">
-    <img src="./profile/pin-django-ais.svg" alt="django-ais"/>
+  <a href="https://github.com/AISquare-Studio/aisquare-cli">
+    <img src="./profile/pin-aisquare-cli.svg" alt="aisquare-cli"/>
+  </a>
+</div>
+
+<div align="center">
+  <a href="https://github.com/AISquare-Studio/pipe">
+    <img src="./profile/pin-pipe.svg" alt="pipe"/>
   </a>
 </div>
 
@@ -73,7 +79,7 @@ Click on a card to explore the project. ⭐ Star your favorites to show support!
 
 <div align="center">
   <a href="https://docs.aisquare.studio"><img src="https://img.shields.io/badge/📖_Documentation-docs.aisquare.studio-2563eb?style=for-the-badge" alt="Documentation"/></a>
-  <a href="https://docs.aisquare.studio/api-reference"><img src="https://img.shields.io/badge/🔌_API_Reference-docs.aisquare.studio-7c3aed?style=for-the-badge" alt="API Reference"/></a>
+  <a href="https://docs.aisquare.studio/docs/api-reference/overview"><img src="https://img.shields.io/badge/🔌_API_Reference-docs.aisquare.studio-7c3aed?style=for-the-badge" alt="API Reference"/></a>
   <a href="https://aisquare.studio"><img src="https://img.shields.io/badge/🌐_Website-aisquare.studio-0d9488?style=for-the-badge" alt="Website"/></a>
   <a href="https://feedback.aisquare.studio"><img src="https://img.shields.io/badge/💬_Feedback-feedback.aisquare.studio-ea580c?style=for-the-badge" alt="Feedback"/></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/🤝_Contributing-guidelines-16a34a?style=for-the-badge" alt="Contributing"/></a>
@@ -123,36 +129,29 @@ Full docs: [AISquare-Studio-QA](https://github.com/AISquare-Studio/AISquare-Stud
 
 ---
 
-### django-ais — Django-native agent orchestration
+### aisquare-cli — one terminal over your coding agents
 
-Orchestrate agentic workflows inside your existing Django stack — Postgres, Celery, Channels, ORM. No new infrastructure, no new religion.
-
-> **Note:** django-ais is in pre-release. The API may change. Pin your versions like a responsible adult.
+Task a manager agent in plain words and it plans, spawns coders, testers and reviewers, and loops until the goal is met. Underneath, agents get a memory that persists your preferences and each project's conventions across sessions, so every session starts oriented instead of cold.
 
 ```bash
-pip install django-ais
+UV_PYTHON_DOWNLOADS=automatic uv tool install --python 3.13 aisquare-cli
+cd path/to/your/repo
+aisquare init --local --agent claude-code
 ```
 
-```python
-# settings.py
-INSTALLED_APPS = [
-    ...
-    "django_ais",
-]
+Full docs: [aisquare-cli](https://github.com/AISquare-Studio/aisquare-cli)
 
-# workers.py
-from django_ais import Worker
+---
 
-class SummaryWorker(Worker):
-    name = "summarizer"
+### pipe — anything-to-anything connectors
 
-    def execute(self, job):
-        return {"summary": summarize(job.payload["text"])}
+Instead of building N² bespoke integrations, each service implements a single Source and/or Sink against a universal `DataEnvelope` spec. The framework handles type matching, pipeline orchestration and plugin discovery.
+
+```bash
+pip install "aisquare-pipe[popular]"
 ```
 
-Define workflows in YAML, stream events over SSE/WebSocket, and manage jobs through the Django ORM.
-
-Full docs: [django-ais](https://github.com/AISquare-Studio/django-ais)
+Full docs: [pipe](https://github.com/AISquare-Studio/pipe)
 
 ## How the pieces fit together
 
@@ -161,15 +160,9 @@ Full docs: [django-ais](https://github.com/AISquare-Studio/django-ais)
 │   Your Agent    │────▶│  AISquare Gov't  │────▶│     AutoQA       │
 │ (any framework) │     │ (audit + policy) │     │ (test generation)│
 └─────────────────┘     └──────────────────┘     └──────────────────┘
-                                │
-                                ▼
-                        ┌──────────────────┐
-                        │    django-ais    │
-                        │ (orchestration)  │
-                        └──────────────────┘
 ```
 
-Your agent framework handles reasoning. AISquare handles the "wait, should you actually do that?" part — recording decisions, enforcing policies, and routing to human review. AutoQA validates behavior through generated tests. django-ais orchestrates multi-step workflows inside Django.
+Your agent framework handles reasoning. AISquare handles the "wait, should you actually do that?" part — recording decisions, enforcing policies, and routing to human review. AutoQA validates behavior through generated tests.
 
 ## LLM-friendly docs
 
@@ -185,7 +178,6 @@ Issues tagged **"good first issue"** across all repos in the [AISquare-Studio or
 
 - [Feedback board](https://feedback.aisquare.studio) — Feature requests, bug reports, and the occasional "have you considered..."
 - [Documentation](https://docs.aisquare.studio) — Guides, API reference, and tutorials
-- [GitHub Discussions](https://github.com/orgs/AISquare-Studio/discussions) — Questions and community conversation
 - [Security](SECURITY.md) — Responsible disclosure policy
 - Email: [bots@aisquare.com](mailto:bots@aisquare.com)
 

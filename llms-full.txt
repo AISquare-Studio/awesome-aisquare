@@ -118,73 +118,19 @@ Multi-agent system powered by CrewAI:
 - Tests run in isolated Playwright browser contexts
 - Sensitive values masked in logs and reports
 
-### django-ais (Django Orchestration Framework)
+### aisquare-cli
 
-**Repo**: https://github.com/AISquare-Studio/django-ais
-**License**: MIT | **Language**: Python | **Status**: Pre-release
+**Repo**: https://github.com/AISquare-Studio/aisquare-cli
+**License**: MIT | **Language**: Python | **Install**: `uv tool install aisquare-cli`
 
-Django-native orchestration framework for building agentic workflows with database-backed job management, YAML-configurable pipelines, and real-time event streaming.
+One terminal over your projects and your coding agents. Task a manager agent in plain words; it plans, spawns coders, testers and reviewers, and loops until the goal is met. Agents get a memory that persists user preferences and project conventions across sessions. The memory layer also works on its own, without the UI.
 
-#### Why django-ais Instead of LangGraph / CrewAI / Temporal
-Those tools operate outside your Django ecosystem. django-ais is for teams that want:
-- Jobs persisted in your existing PostgreSQL database
-- Celery as the task runner you already operate
-- Django Channels for real-time streaming you already deploy
-- Django ORM for querying job history, not a separate state store
-- Standard Django patterns: models, migrations, admin, signals, management commands
+### pipe (aisquare.pipe)
 
-#### Architecture: Worker / Strategy / Gateway
+**Repo**: https://github.com/AISquare-Studio/pipe
+**License**: Apache 2.0 | **Language**: Python | **Install**: `pip install aisquare-pipe`
 
-```
-Worker (Lifecycle) → Strategy (Brain) → Gateway (Execution)
-     │                                        │
-     ▼                                        ▼
-  JobPacket (DB)                          EventBus (Redis)
-```
-
-| Layer | Responsibility | Rule |
-|-------|---------------|------|
-| **Worker** | Job lifecycle, state transitions, child job spawning | Knows Django models, owns the job |
-| **Strategy** | Prompt engineering, context composition, output schema | No Django models — Pydantic only |
-| **Gateway** | LLM/compute execution, streaming, tracing | Interchangeable backends |
-
-#### Key Features
-- DB-backed job tracking with persistent JobPacket model (status, payload, result, parent-child, idempotency keys)
-- Real-time event streaming via AgentEvent model + Redis-backed EventBus for SSE/WebSocket
-- YAML workflow definitions importable via management commands
-- Dynamic worker registry — register workers in AppConfig.ready(), dispatch by type
-- Multi-tenant safety — scoped event streaming and job isolation per user/workspace
-
-#### Quick Start (Coming Soon)
-```python
-pip install django-ais
-
-# settings.py
-INSTALLED_APPS = [..., 'django_ais']
-DJANGO_AIS = {
-    'CELERY_QUEUE': 'default',
-    'EVENT_CHANNEL_LAYER': 'default',
-}
-
-# your_app/workers.py
-from django_ais.workers import BaseWorker
-from django_ais.strategies import BaseStrategy
-
-class SummarizationStrategy(BaseStrategy):
-    def compose_context(self, job):
-        return {"prompt": f"Summarize: {job.payload['text']}"}
-
-class SummarizationWorker(BaseWorker):
-    strategy_class = SummarizationStrategy
-    gateway_class = BaseGateway
-```
-
-#### Requirements
-- Python 3.11+
-- Django 4.2+
-- Celery 5.3+
-- Redis
-- Django Channels (optional, for real-time streaming)
+Universal anything-to-anything connector framework. Instead of N² bespoke integrations, each service implements a single Source (pulls data) and/or Sink (pushes data) against a universal `DataEnvelope` spec. The framework handles type matching, pipeline orchestration and plugin discovery. Each connector ships as its own pip package (`aisquare-pipe-<service>`).
 
 ---
 
@@ -196,7 +142,7 @@ The AISquare API allows you to:
 - Manage collections and workflows
 - Build applications on top of governed AI systems
 
-Full API reference: https://docs.aisquare.studio/api-reference
+Full API reference: https://docs.aisquare.studio/docs/api-reference/overview
 
 ## Authentication
 
@@ -204,7 +150,7 @@ AISquare uses token-based authentication. See: https://docs.aisquare.studio/docs
 
 ## Integration Patterns
 
-Common patterns for connecting AISquare to different architectures: https://docs.aisquare.studio/docs/integration-guides/integration-patterns
+Common patterns for connecting AISquare to different architectures: https://docs.aisquare.studio/docs/guides/integration-patterns
 
 ## Errors and Troubleshooting
 

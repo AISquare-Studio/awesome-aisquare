@@ -15,29 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate awesome-aisquare pin card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=AISquare-Studio&repo=awesome-aisquare&theme=dark&show_owner=true&title_color=f0883e
-          path: profile/pin-awesome-aisquare.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate AISquare-Studio-QA pin card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=AISquare-Studio&repo=AISquare-Studio-QA&theme=dark&show_owner=true&title_color=f0883e
-          path: profile/pin-aisquare-studio-qa.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate django-ais pin card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=AISquare-Studio&repo=django-ais&theme=dark&show_owner=true&title_color=f0883e
-          path: profile/pin-django-ais.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Render repo cards
+        run: python3 .github/scripts/render_pin_cards.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
         run: |

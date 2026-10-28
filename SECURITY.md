@@ -19,7 +19,8 @@ We will acknowledge receipt within 48 hours and aim to provide a resolution time
 |------|-----------|
 | awesome-aisquare | Latest on `main` |
 | AISquare-Studio-QA | Latest on `main` |
-| django-ais | Pre-release — all reported issues will be addressed |
+| aisquare-cli | Latest release |
+| pipe | Latest release |
 
 ## Scope
 
