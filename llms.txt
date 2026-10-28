@@ -16,34 +16,32 @@
 
 ## Integration Guides
 
-- [Build your first integration](https://docs.aisquare.studio/docs/integration-guides/build-your-first-ai-studio-integration): Step-by-step guide to integrating AISquare with your agent system
-- [Integration patterns](https://docs.aisquare.studio/docs/integration-guides/integration-patterns): Common patterns for connecting AISquare to different architectures
-- [User onboarding & account lifecycle](https://docs.aisquare.studio/docs/integration-guides/user-onboarding-account-lifecycle): Managing users and accounts in AISquare
-- [Token lifecycle & session management](https://docs.aisquare.studio/docs/integration-guides/token-lifecycle-session-management): How authentication tokens and sessions work
+- [Build your first integration](https://docs.aisquare.studio/docs/use-in-your-agent): Step-by-step guide to integrating AISquare with your agent system
+- [Integration patterns](https://docs.aisquare.studio/docs/guides/integration-patterns): Common patterns for connecting AISquare to different architectures
+- [User onboarding & account lifecycle](https://docs.aisquare.studio/docs/guides/user-onboarding): Managing users and accounts in AISquare
+- [Token lifecycle & session management](https://docs.aisquare.studio/docs/guides/token-lifecycle): How authentication tokens and sessions work
 
 ## Data & UX Guides
 
-- [Content modeling guide](https://docs.aisquare.studio/docs/data-ux-guides/content-modeling-guide): How to structure content and data models in AISquare
-- [Search, filtering, and pagination](https://docs.aisquare.studio/docs/data-ux-guides/search-filtering-and-pagination): Query patterns for the API
-- [Permissions and access control](https://docs.aisquare.studio/docs/data-ux-guides/permissions-and-access-control): Role-based access and permission models
+- [Content modeling guide](https://docs.aisquare.studio/docs/guides/content-modeling): How to structure content and data models in AISquare
+- [Search, filtering, and pagination](https://docs.aisquare.studio/docs/guides/search-and-filtering): Query patterns for the API
+- [Permissions and access control](https://docs.aisquare.studio/docs/guides/permissions): Role-based access and permission models
 
 ## Product Features
 
-- [AI Studios](https://docs.aisquare.studio/docs/product/ai-studios): Create and manage AI expert studios
-- [Collections](https://docs.aisquare.studio/docs/product/collections): Organize and curate content collections
-- [Activity and personalization](https://docs.aisquare.studio/docs/product/activity-and-personalization): Activity tracking and personalization features
-- [Community](https://docs.aisquare.studio/docs/product/community): Community features and social interactions
-- [Bookings](https://docs.aisquare.studio/docs/product/bookings): Booking and scheduling system
+- [AI Studios](https://docs.aisquare.studio/docs/studios/overview): Create and manage AI expert studios
+- [Collections](https://docs.aisquare.studio/docs/studios/collections): Organize and curate content collections
 
 ## Open Source Ecosystem
 
 - [awesome-aisquare](https://github.com/AISquare-Studio/awesome-aisquare): Core entry point repo — ecosystem map, quickstarts, and links to all AISquare open source projects
 - [AISquare-Studio-QA (AutoQA)](https://github.com/AISquare-Studio/AISquare-Studio-QA): AI-powered GitHub Action that converts natural language test descriptions in PR bodies into Playwright tests using CrewAI multi-agent orchestration
-- [django-ais](https://github.com/AISquare-Studio/django-ais): Django-native orchestration framework for agentic workflows with DB-backed job management, Worker/Strategy/Gateway pattern, YAML pipelines, and real-time event streaming
+- [aisquare-cli](https://github.com/AISquare-Studio/aisquare-cli): One terminal over your projects and coding agents: a manager agent plans and runs coders, testers and reviewers, with a memory layer that persists user and project context across sessions
+- [pipe](https://github.com/AISquare-Studio/pipe): Universal anything-to-anything connector framework; each service implements one Source and/or Sink against a shared DataEnvelope spec
 
 ## API Reference
 
-- [API Reference](https://docs.aisquare.studio/api-reference): Full API documentation for all AISquare endpoints
+- [API Reference](https://docs.aisquare.studio/docs/api-reference/overview): Full API documentation for all AISquare endpoints
 
 ## Reference
 
